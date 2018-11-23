@@ -1,10 +1,12 @@
 import React from 'react';
+import Logo from '../Logo/Logo';
+import Navigation from '../Navigarion/Navigation';
 
 import classes from './Header.css';
 const header = (props) => (
   <header>
-    <div>Logo</div>
-    <div>Navigation</div>
+    <Logo />
+    <Navigation />
     <div>searchbar</div>
   </header>
 );
