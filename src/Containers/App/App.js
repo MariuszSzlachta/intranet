@@ -6,9 +6,8 @@ import Footer from '../../Components/Footer/Footer';
 import Terms from '../../Components/Terms/Terms';
 
 import classes from './App.module.scss';
+import Placeholder from '../../Components/Placeholer/Placeholder';
 
-const Index = () => <h2>Home</h2>;
-const Test = () => <h2>aaaa</h2>;
 
 class App extends Component {
   render() {
@@ -17,8 +16,12 @@ class App extends Component {
         <div className={classes.container}>
           <Header />
 
-          <Route path="/ind" exact component={Index} />
-          <Route path="/test" component={Test} />
+          <Route path="/" exact render={props => <Placeholder {...props} title="Strona Głowna" />} />
+          <Route path="/news" render={props => <Placeholder {...props} title="Wiadomości" />} />
+          <Route path="/departments" render={props => <Placeholder {...props} title="Departamenty" />} />
+          <Route path="/toolbox" render={props => <Placeholder {...props} title="Niezbędnik" />} />
+          <Route path="/announcements" render={props => <Placeholder {...props} title="Ogłoszenia" />} />
+          <Route path="/sections" render={props => <Placeholder {...props} title="Sekcje" />} />
           <Route path="/terms" component={Terms} />
           <Footer />
         </div>
