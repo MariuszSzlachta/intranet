@@ -3,9 +3,9 @@ import React from 'react';
 import classes from './Toggler.module.scss';
 
 const toggler = (props) => {
-  let componentClasses = ['toggler'];
+  let componentClasses = [classes.toggler];
   if (!props.toggled) {
-    componentClasses.push('toggled');
+    componentClasses.push(classes.toggled);
   } else {
     componentClasses = componentClasses.filter(el => el === 'toggled' ? null : el);
   }
