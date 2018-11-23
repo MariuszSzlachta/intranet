@@ -1,3 +1,8 @@
-.imageContainer {
+.logo {
   
+}
+.logo__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
