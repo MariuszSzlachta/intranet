@@ -1,11 +1,13 @@
 .placeholder {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .placeholder__title {
-
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .placeholder__text {
-  
+  line-height: 2;
 }
