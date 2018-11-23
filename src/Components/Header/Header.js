@@ -1,12 +1,12 @@
 import React from 'react';
 
 import classes from './Header.css';
-const Header = (props) => (
-  <Header>
+const header = (props) => (
+  <header>
     <div>Logo</div>
     <div>Navigation</div>
     <div>searchbar</div>
-  </Header>
+  </header>
 );
 
-export default Header;
+export default header;
