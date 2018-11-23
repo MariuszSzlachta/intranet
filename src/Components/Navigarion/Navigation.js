@@ -10,10 +10,22 @@ const navigation = () => (
     </button>
     <ul>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/">Strona główna</Link>
       </li>
       <li>
-        <Link to="/ind">Ind</Link>
+        <Link to="/news">Wiadomości</Link>
+      </li>
+      <li>
+        <Link to="/departments">Departamenty</Link>
+      </li>
+      <li>
+        <Link to="/toolbox">Niezbędnik</Link>
+      </li>
+      <li>
+        <Link to="/announcements">Ogłoszenia</Link>
+      </li>
+      <li>
+        <Link to="/sections">Sections</Link>
       </li>
     </ul>
   </nav>

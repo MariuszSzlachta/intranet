@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
+import Terms from '../../Components/Terms/Terms';
 
 import classes from './App.css';
 
@@ -19,7 +20,7 @@ class App extends Component {
 
           <Route path="/ind" exact component={Index} />
           <Route path="/test" component={Test} />
-          
+          <Route path="/terms" component={Terms} />
           <Footer />
         </div>
     </Router>
