@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
-import Navigation from '../Navigarion/Navigation';
+import Navigation from '../../Containers/Navigation/Navigation';
 
 import classes from './Header.module.scss';
 // console.log(classes);

@@ -1,0 +1,11 @@
+.navbarItem {
+  padding: 5px 10px;
+  border-bottom: 4px solid transparent;
+  transition:  0.3 ease-in-out;
+  &:hover {
+    border-bottom: 4px solid #85a2b6;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}

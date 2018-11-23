@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
+        <div className={classes.container}>
           <Header />
 
           <Route path="/ind" exact component={Index} />
