@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './Placeholder.css';
+import classes from './Placeholder.module.scss';
 
 const placeholder = (props) => (
   <section className={classes.placeholder}>

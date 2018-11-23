@@ -5,14 +5,13 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Terms from '../../Components/Terms/Terms';
 
-import classes from './App.css';
+import classes from './App.module.scss';
 
 const Index = () => <h2>Home</h2>;
 const Test = () => <h2>aaaa</h2>;
 
 class App extends Component {
   render() {
-
     return (
       <Router>
         <div className="container">
