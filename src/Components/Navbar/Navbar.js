@@ -10,9 +10,15 @@ const navbar = (props) => {
     )
   });
 
-  const displayProperty = !props.toggled ? 'flex' : 'none';
+  let componentClasses = [classes.navbar];
+  if (!props.toggled) {
+    componentClasses.push(classes.toggled);
+  } else {
+    // componentClasses = componentClasses.filter(el => el === 'toggled' ? null : el);
+  }
+  console.log(componentClasses);
   return (
-    <ul className={classes.navbar} style={{display: displayProperty}} >
+    <ul className={componentClasses.join(' ')} >
       {navbarItems}
     </ul>
   );

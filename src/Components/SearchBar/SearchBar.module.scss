@@ -3,6 +3,7 @@
   align-items: center;
   border: 1px solid #eee;
   padding: 5px 10px;
+  min-width: 130px;
   &__input {
     display: block;
     width: 80%;
@@ -17,5 +18,13 @@
   &__button {
     order: 2;
     width: 20%;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &:hover > * {
+      transform: scale(1.2);
+    }
   }
 }

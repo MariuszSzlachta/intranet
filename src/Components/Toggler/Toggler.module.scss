@@ -2,6 +2,7 @@
   display: none;
   position: absolute;
 }
+
 @media (max-width: 992px) {
   .toggler {
     display: inline-block;
@@ -13,9 +14,8 @@
     border: none;
     padding: 0;
     background-color: transparent;
-    background: black;
     cursor: pointer;
-    .firefox-fallback {
+    .firefoxFallback {
       width: 100%;
       height: 100%;
       display: flex;
@@ -27,18 +27,17 @@
       height: 5px;
       width: 40px;
       background-color: #85a2b6;
-      background-color: red;
       transition: transform 0.3s ease-in-out;
     }
     &.toggled .toggler__bar:nth-child(1) {
-      background-color: blue;
+      // background-color: blue;
       transform: translateY(15px) rotate(45deg);
     }
     &.toggled .toggler__bar:nth-child(2) {
       transform: translateX(9999px);
     }
     &.toggled .toggler__bar:nth-child(3) {
-      background-color: blue;
+      // background-color: blue;
       transform: translateY(-15px) rotate(-45deg);
     }
   }

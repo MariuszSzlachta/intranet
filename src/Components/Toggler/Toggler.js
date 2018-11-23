@@ -12,9 +12,11 @@ const toggler = (props) => {
 
   return (
     <button className={componentClasses.join(' ')} onClick={props.toggle}>
-      <span className={classes.toggler__bar}></span>
-      <span className={classes.toggler__bar}></span>
-      <span className={classes.toggler__bar}></span>
+      <div className={classes.firefoxFallback}>
+        <span className={classes.toggler__bar}></span>
+        <span className={classes.toggler__bar}></span>
+        <span className={classes.toggler__bar}></span>
+      </div>
     </button>
   )
 }

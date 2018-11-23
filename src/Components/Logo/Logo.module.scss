@@ -1,4 +1,5 @@
 .logo {
+  position: relative;
   max-width: 300px;
 }
 .logo__image {
@@ -7,3 +8,8 @@
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 1rem;
+  }
+}
