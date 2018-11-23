@@ -23,8 +23,9 @@ class App extends Component {
     }
   }
 
-  onSearchHandler = (event) => {
-    let searchingText = event.target.value;
+  onSubmitHandler = (event) => {
+    event.preventDefault();
+    let searchingText = event.target.input.value;
     if (searchingText.length > 3) {
       this.setState({
         searchingText
@@ -33,11 +34,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.searchingText)
     return (
       <Router>
         <div className={classes.container}>
-          <Header changed={this.onSearchHandler} />
+          <Header submited={this.onSubmitHandler} />
 
           <Route path="/" exact render={props => <Placeholder {...props} title="Strona Główna" />} />
           <Route path="/news" render={props => <Placeholder {...props} title="Wiadomości" />} />

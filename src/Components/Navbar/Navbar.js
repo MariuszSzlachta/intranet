@@ -11,7 +11,6 @@ const navbar = (props) => {
   });
 
   const displayProperty = !props.toggled ? 'flex' : 'none';
-  console.log(displayProperty);
   return (
     <ul className={classes.navbar} style={{display: displayProperty}} >
       {navbarItems}

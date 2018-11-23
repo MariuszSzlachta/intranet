@@ -11,7 +11,7 @@ const header = (props) => (
     <Logo />
     <Navigation />
     <SearchBar
-      changed={(event) => props.changed(event)}
+      submited={(event) => props.submited(event)}
     />
   </header>
 );

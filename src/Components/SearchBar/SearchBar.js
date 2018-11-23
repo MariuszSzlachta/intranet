@@ -4,16 +4,16 @@ import classes from './SearchBar.module.scss';
 
 const searchBar = (props) => {
   return (
-    <div className={classes.searchBar}>
-      <label className={classes.searchBar__label} htmlFor={props.id} aria-label="search icon">
+    <form className={classes.searchBar} onSubmit={props.submited}>
+      <button className={classes.searchBar__button} type="submit" aria-label="search icon">
         <i className="fas fa-search"></i>
-      </label>
+      </button>
       <input
-        className={classes.searchBar__input} 
+        className={classes.searchBar__input}
         type="text"
-        onChange={props.changed}
+        name="input"
       />
-    </div>
+    </form>
   );
 };
 

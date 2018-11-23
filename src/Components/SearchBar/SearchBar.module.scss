@@ -1,0 +1,18 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  &__input {
+    display: block;
+    width: 80%;
+    margin-right: 5px;
+    outline: none;
+    border: none;
+    order: 1;
+  }
+  &__button {
+    order: 2;
+    width: 20%;
+  }
+}
