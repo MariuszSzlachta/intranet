@@ -14,9 +14,9 @@ const navbar = (props) => {
   if (!props.toggled) {
     componentClasses.push(classes.toggled);
   } else {
-    // componentClasses = componentClasses.filter(el => el === 'toggled' ? null : el);
+    componentClasses = componentClasses.filter(el => el === 'toggled' ? null : el);
   }
-  console.log(componentClasses);
+
   return (
     <ul className={componentClasses.join(' ')} >
       {navbarItems}

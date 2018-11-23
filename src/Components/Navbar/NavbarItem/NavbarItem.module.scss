@@ -1,12 +1,16 @@
 .navbarItem {
-  padding: 5px;
-  border-bottom: 4px solid transparent;
-  transition: 0.3s ease-in-out;
-  &:hover {
-    border-bottom: 4px solid #85a2b6;
-  }
   &__link {
+    display: block;
+    border-bottom: 4px solid transparent;
+    padding: 5px;
     color: #85a2b6;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      border-bottom: 4px solid #85a2b6;
+    }
+  }
+  .active {
+    border-bottom: 4px solid #85a2b6;
   }
 }
