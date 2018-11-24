@@ -39,12 +39,12 @@ class App extends Component {
         <div className={classes.container}>
           <Header submited={this.onSubmitHandler} />
 
-          <Route path="/" exact render={props => <Placeholder {...props} title="Strona Główna" />} />
-          <Route path="/news" render={props => <Placeholder {...props} title="Wiadomości" />} />
-          <Route path="/departments" render={props => <Placeholder {...props} title="Departamenty" />} />
-          <Route path="/toolbox" render={props => <Placeholder {...props} title="Niezbędnik" />} />
-          <Route path="/announcements" render={props => <Placeholder {...props} title="Ogłoszenia" />} />
-          <Route path="/sections" render={props => <Placeholder {...props} title="Sekcje" />} />
+          <Route path="/" exact render={props => <Placeholder {...props} title="Home" />} />
+          <Route path="/news" render={props => <Placeholder {...props} title="News" />} />
+          <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
+          <Route path="/toolbox" render={props => <Placeholder {...props} title="Toolbox" />} />
+          <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
+          <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
           <Route path="/terms" component={Terms} />
 
           <Footer data={this.state.companyData} />

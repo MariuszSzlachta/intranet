@@ -1,6 +1,7 @@
 .placeholder {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .placeholder__title {

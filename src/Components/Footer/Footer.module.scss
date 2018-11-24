@@ -12,6 +12,13 @@
     font-size: 1.4rem;
     color: #007;
   }
+  &__link {
+    color: #007;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #020;
+    }
+  }
   &__address {
     display: flex;
     flex-direction: column;

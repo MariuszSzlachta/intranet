@@ -14,9 +14,10 @@ const footer = (props) => (
     </address>
     <div className={classes.footer__copy}>
       <p className={classes.footer__text}>
-        Using this application you accept
-        <Link to="/terms">
-          <strong> terms and conditions of use</strong>
+        <span>Using this application you accept</span>
+        <br />
+        <Link to="/terms" className={classes.footer__link}>
+          <strong>terms and conditions of use</strong>
         </Link>
       </p>
       <p className={classes.footer__text}>Copyright &copy; 2018 Company</p>

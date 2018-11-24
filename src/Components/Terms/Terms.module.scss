@@ -1,0 +1,17 @@
+.terms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0;
+  border-top: 4px solid orangered;
+  border-bottom: 4px solid orangered;
+  &__header {
+    text-transform: uppercase;
+  }
+  &__heading_1 {
+    text-decoration: underline;
+  }
+  &__heading_2 {
+    text-align: center;
+  }
+}

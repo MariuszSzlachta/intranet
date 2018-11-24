@@ -13,27 +13,27 @@ class Navigation extends Component {
       togglerOn: false,
       links: [
         {
-          name: 'Strona głowna',
+          name: 'Home',
           target: '/'
         },
         {
-          name: 'Wiadomości',
+          name: 'News',
           target: '/news'
         },
         {
-          name: 'Departamenty',
+          name: 'Departments',
           target: '/departments'
         },
         {
-          name: 'Niezbędnik',
+          name: 'Toolbox',
           target: '/toolbox'
         },
         {
-          name: 'Ogłoszenia',
+          name: 'Announcements',
           target: '/announcements'
         },
         {
-          name: 'Sekcje',
+          name: 'Sections',
           target: '/sections'
         }
       ]
