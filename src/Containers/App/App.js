@@ -14,7 +14,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchingText: '',
       companyData: {
         address: 'ul. Słoneczna 51/2, 02-528 Warszawa',
         krs: '00000000',
@@ -158,11 +157,25 @@ class App extends Component {
 
   onSubmitHandler = (event) => {
     event.preventDefault();
+    const initialState = [...this.state.toolboxData];
     let searchingText = event.target.input.value;
+
     if (searchingText.length > 3) {
+
+      const state = [...this.state.toolboxData];
+      let filteredCategories = state.filter(el => el.name.includes(searchingText) ? el : null);
+
+      if (filteredCategories.length === 0) {
+        console.log(state)
+        filteredCategories = state.map(category => {
+          category.links = category.links.filter(link => link.name.includes(searchingText));
+          return category;
+        })
+      }
+
       this.setState({
-        searchingText
-      });
+        toolboxData: filteredCategories
+      })
     }
   }
 
@@ -175,7 +188,10 @@ class App extends Component {
           <Route path="/" exact render={props => <Placeholder {...props} title="Home" />} />
           <Route path="/news" render={props => <Placeholder {...props} title="News" />} />
           <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
-          <Route path="/toolbox" render={props => <Toolbox {...props} data={this.state.toolboxData} />} />
+          <Route
+            path="/toolbox"
+            render={props => <Toolbox {...props} submited={this.onSubmitHandler} data={this.state.toolboxData} />}
+          />
           <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
           <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
           <Route path="/terms" component={Terms} />
