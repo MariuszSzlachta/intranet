@@ -1,17 +1,58 @@
+@import '../../Shared/variables.module.scss';
+
 .terms {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 4rem 0;
-  border-top: 4px solid orangered;
-  border-bottom: 4px solid orangered;
-  &__header {
-    text-transform: uppercase;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: $gradient;
+  height: $compHeight;
+  margin-top: 60px;
+  padding: 2rem;
+  &__section {
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+    border: 1px solid $text_hover;
   }
   &__heading_1 {
-    text-decoration: underline;
+    position: relative;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: $white;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $secondary;
+    }
   }
   &__heading_2 {
+    font-size: 1.6rem;
+    color: $text_primary;
     text-align: center;
+  }
+  &__text {
+    font-size: 1.4rem;
+    color: $text_primary;
+    text-align: left;
+  }
+  &__list {
+    margin: 2rem 0;
+    color: $white;
+    &__listItem {
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .terms {
+    // overflow-y: initial;
+    height: auto;
+    min-height: 100vh;
   }
 }
