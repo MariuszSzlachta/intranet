@@ -9,6 +9,13 @@ import classes from './App.module.scss';
 import Placeholder from '../../Components/Placeholer/Placeholder';
 import Toolbox from '../../Components/Toolbox/Toolbox';
 
+// icons
+// I import hehe icons to put them into state, because I want to have proper paths to them in different builds
+import tagIcon from '../../Assets/images/tag.svg';
+import schoolIcon from '../../Assets/images/school.svg';
+import suitcaseIcon from '../../Assets/images/suitcase.svg';
+import documentIcon from '../../Assets/images/document.svg';
+import bubbleIcon from '../../Assets/images/bubble.svg';
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +31,7 @@ class App extends Component {
         {
           id: '1',
           name: 'forums',
-          iconUrl: 'aaa',
+          iconUrl: bubbleIcon,
           links: [
             {
               id: '1a',
@@ -56,7 +63,7 @@ class App extends Component {
         {
           id: '2',
           name: 'resources O365',
-          iconUrl: 'styh',
+          iconUrl: documentIcon,
           links: [
             {
               id: '2a',
@@ -88,7 +95,7 @@ class App extends Component {
         {
           id: '3',
           name: 'projects',
-          iconUrl: 'aaaaaaa',
+          iconUrl: schoolIcon,
           links: [
             {
               id: '3a',
@@ -130,7 +137,7 @@ class App extends Component {
         {
           id: '4',
           name: 'society',
-          iconUrl: 'ssssadad',
+          iconUrl: suitcaseIcon,
           links: [
             {
               id: '4a',
@@ -142,7 +149,7 @@ class App extends Component {
         {
           id: '5',
           name: 'important',
-          iconUrl: 'ssssadad',
+          iconUrl: tagIcon,
           links: [
             {
               id: '5a',
