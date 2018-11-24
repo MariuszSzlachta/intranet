@@ -18,7 +18,7 @@ const category = (props) => {
     <li key={props.id} className={classes.category}>
       <header className={classes.category__header}>
         <img className={classes.category__icon} src={props.iconUrl} alt="category icon" />
-        <p className="category__name">{props.name}</p>
+        <p className={classes.category__name} >{props.name}</p>
       </header>
       <ul className={classes.category__list}>
         {linksElements}

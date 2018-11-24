@@ -10,8 +10,16 @@
   margin-top: 60px;
   padding: 2rem;
   &__componentWrapper {
+    width: 300px;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
   }
   &__title {
     position: relative;
@@ -36,5 +44,21 @@
   .toolbox {
     height: auto;
     min-height: 100vh;
+    &__componentWrapper {
+      max-width: initial;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbox {
+    padding: 12px;
+    &__wrapper {
+      margin: 0;
+    }
+    &__componentWrapper {
+      width: 100%;
+    }
   }
 }

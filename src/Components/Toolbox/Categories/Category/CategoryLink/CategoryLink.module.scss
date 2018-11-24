@@ -1,0 +1,15 @@
+@import '../../../../../Shared/variables.module.scss';
+
+.categoryLink {
+  font-size: 1.4rem;
+  color: $text_primary;
+  text-decoration: none;
+  line-height: 2;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $white;
+  }
+  &:visited {
+    font-style: italic;
+  }
+}

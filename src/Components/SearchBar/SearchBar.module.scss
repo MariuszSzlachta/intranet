@@ -7,6 +7,7 @@
   padding: 5px 10px;
   min-width: 110px;
   background-color: $bg_light;
+  height: 30px;
   &__input {
     display: block;
     width: 80%;
@@ -15,6 +16,7 @@
     order: 1;
     background: transparent;
     color: $text_primary;
+    font-size: 1.2rem;
   }
   &__button {
     order: 2;

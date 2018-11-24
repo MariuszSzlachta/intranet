@@ -1,10 +1,17 @@
 import React from 'react';
+
 import classes from './CategoryLink.module.scss';
+console.log(classes);
 
 const categoryLink = (props) => {
   return (
-    <li className={classes.link} id={props.id} key={props.id} >
-      <a href={props.url} >
+    <li className={classes.categoryItem} id={props.id} key={props.id} >
+      <a
+        href={props.url}
+        className={classes.categoryLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {props.name}
       </a>
     </li>
