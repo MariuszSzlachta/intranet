@@ -9,8 +9,10 @@ const toolbox = (props) => {
 
   return (
     <div className={classes.toolbox}>
-      <h1 className={classes.toolbox__heading}>Toolbox</h1>
-      <SearchBar submited={(event) => props.submited(event)} />
+      <h1 className={classes.toolbox__title}>Toolbox</h1>
+      <div className={classes.toolbox__componentWrapper}>
+        <SearchBar submited={(event) => props.submited(event)} />
+      </div>
       <div className={classes.toolbox__wrapper}>
         <Categories data={props.data} />
       </div>

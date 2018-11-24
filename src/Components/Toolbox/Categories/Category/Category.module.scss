@@ -1,0 +1,15 @@
+@import '../../../../Shared/variables.module.scss';
+
+.category {
+  display: flex;
+  flex-direction: column;
+  &__header {
+    display: flex;
+    max-height: 60px;
+    align-items: center;
+  }
+  &__icon {
+    width: 40px;
+    height: auto;
+  }
+}
