@@ -58,7 +58,7 @@ class App extends Component {
           id: '2',
           name: 'resources O365',
           iconUrl: 'styh',
-          link: [
+          links: [
             {
               id: '2a',
               name: 'office apps',
