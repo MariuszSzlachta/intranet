@@ -1,6 +1,8 @@
+@import '../../Shared/variables.module.scss';
+
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   list-style: none;
   margin: 0 5px;
@@ -9,15 +11,25 @@
 
 @media (max-width: 992px) {
   .navbar {
-    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    margin: 0;
+    padding: 2rem;
     height: 0;
     opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg_dark;
     transition: height 0.3s ease-in-out, opacity 0.7s ease-in-out;
     > * {
       display: none;
     }
     &.toggled {
-      height: 50px;
+      width: 100vw;
+      height: 100vh;
       opacity: 1;
       > * {
         display: list-item;
@@ -26,23 +38,23 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    margin-bottom: 2rem;
-    padding: 0;
-    height: 0;
-    opacity: 0;
-    transition: height 0.3s ease-in-out, opacity 0.7s ease-in-out;
-    > * {
-      display: none;
-    }
-    &.toggled {
-      height: 230px;
-      opacity: 1;
-      > * {
-        display: list-item;
-      }
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   .navbar {
+//     flex-direction: column;
+//     margin-bottom: 2rem;
+//     padding: 0;
+//     height: 0;
+//     opacity: 0;
+//     transition: height 0.3s ease-in-out, opacity 0.7s ease-in-out;
+//     > * {
+//       display: none;
+//     }
+//     &.toggled {
+//       height: 230px;
+//       opacity: 1;
+//       > * {
+//         display: list-item;
+//       }
+//     }
+//   }
+// }

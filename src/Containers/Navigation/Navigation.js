@@ -47,8 +47,8 @@ class Navigation extends Component {
   render() {
     return (
       <nav className={classes.nav}>
-        <Toggler toggle={this.toggleNavbarhandler} toggled={this.state.togglerOn} />
         <Navbar toggled={this.state.togglerOn} links={this.state.links} />
+        <Toggler toggle={this.toggleNavbarhandler} toggled={this.state.togglerOn} />
       </nav>
     );
   }

@@ -1,16 +1,28 @@
+@import '../../../Shared/variables.module.scss';
+
 .navbarItem {
   &__link {
     display: block;
-    border-bottom: 4px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin: 5px;
     padding: 5px;
-    color: #85a2b6;
+    font-size: 1.2rem;
+    color: $text_primary;
     text-decoration: none;
     transition: 0.3s ease-in-out;
     &:hover {
-      border-bottom: 4px solid #85a2b6;
+      border-bottom: 1px solid $primary;
     }
   }
   .active {
-    border-bottom: 4px solid #85a2b6;
+    border-bottom: 1px solid $primary;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbarItem {
+    &__link {
+      font-size: 1.6rem;
+    }
   }
 }

@@ -1,11 +1,16 @@
+@import '../../Shared/variables.module.scss';
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media (max-width: 992px) {
-  .header {
-    flex-direction: column;
-  }
+  height: 60px;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+  padding: 10px;
+  background-color: $bg_primary;
 }

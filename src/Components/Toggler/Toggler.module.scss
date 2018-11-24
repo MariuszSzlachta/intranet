@@ -1,20 +1,21 @@
+@import '../../Shared/variables.module.scss';
+
 .toggler {
   display: none;
-  position: absolute;
 }
 
 @media (max-width: 992px) {
   .toggler {
+    position: relative;
+    z-index: 1000;
     display: inline-block;
-    width: 40px;
-    height: 35px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    width: 36px;
+    height: 25px;
     border: none;
     padding: 0;
     background-color: transparent;
     cursor: pointer;
+    transition: 0.7s ease-in-out;
     .firefoxFallback {
       width: 100%;
       height: 100%;
@@ -25,21 +26,19 @@
       overflow: hidden;
     }
     &__bar {
-      height: 5px;
-      width: 40px;
-      background-color: #85a2b6;
+      height: 2px;
+      width: 36px;
+      background-color: $text_primary;
       transition: transform 0.3s ease-in-out;
     }
     &.toggled .toggler__bar:nth-child(1) {
-      // background-color: blue;
-      transform: translateY(15px) rotate(45deg);
+      transform: translateY(12px) rotate(45deg);
     }
     &.toggled .toggler__bar:nth-child(2) {
       transform: translateX(9999px);
     }
     &.toggled .toggler__bar:nth-child(3) {
-      // background-color: blue;
-      transform: translateY(-15px) rotate(-45deg);
+      transform: translateY(-12px) rotate(-45deg);
     }
   }
 }

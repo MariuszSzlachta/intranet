@@ -1,0 +1,16 @@
+$bg_primary: #303841;
+$bg_dark: #2d3741;
+$bg_light: #485462;
+
+$primary: #ff9922;
+$secondary: #ee0000;
+$text_primary: #abaeb3;
+$text_hover: #abaeb3;
+
+$white: #fff;
+
+$gradient: linear-gradient(135deg, $bg_dark 0%, $bg_light 100%);
+
+// 100vh - header - footer
+$compHeight: calc(100vh - 60px - 80px);
+

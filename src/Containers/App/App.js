@@ -187,7 +187,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className={classes.container}>
+        <div className={classes.containerFluid}>
           <Header submited={this.onSubmitHandler} />
 
           <Route path="/" exact render={props => <Placeholder {...props} title="Home" />} />
