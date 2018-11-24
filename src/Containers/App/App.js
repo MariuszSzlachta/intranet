@@ -157,7 +157,6 @@ class App extends Component {
 
   onSubmitHandler = (event) => {
     event.preventDefault();
-    const initialState = [...this.state.toolboxData];
     let searchingText = event.target.input.value;
 
     if (searchingText.length > 3) {
@@ -166,13 +165,12 @@ class App extends Component {
       let filteredCategories = state.filter(el => el.name.includes(searchingText) ? el : null);
 
       if (filteredCategories.length === 0) {
-        console.log(state)
         filteredCategories = state.map(category => {
           category.links = category.links.filter(link => link.name.includes(searchingText));
           return category;
         })
+        filteredCategories = filteredCategories.filter(category => category.links.length !==0);
       }
-
       this.setState({
         toolboxData: filteredCategories
       })
