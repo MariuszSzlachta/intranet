@@ -1,0 +1,15 @@
+@import './variables.module.scss';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.containerFluid {
+  padding: 0;
+  width: 100%;
+  height: $compHeight;
+  max-height: $compHeight;
+  min-height: $compHeight;
+}

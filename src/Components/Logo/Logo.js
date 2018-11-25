@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Logo.module.scss'
 
-import image from '../../Assets/images/Intranet.svg';
+import image from '../../Assets/images/Logo.svg';
 
 const logo = (props) => {
   console.log()

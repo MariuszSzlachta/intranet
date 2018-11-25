@@ -5,7 +5,7 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Terms from '../../Components/Terms/Terms';
 
-import classes from './App.module.scss';
+import classes from '../../Shared/styles.modules.scss';
 import Placeholder from '../../Components/Placeholer/Placeholder';
 import Toolbox from '../../Components/Toolbox/Toolbox';
 
@@ -36,27 +36,27 @@ class App extends Component {
             {
               id: '1a',
               name: 'development forum',
-              url: 'www.google.pl'
+              url: 'https://google.pl'
             },
             {
               id: '1b',
               name: 'instalations forum',
-              url: 'www.google.pl'
+              url: 'https://google.pl'
             },
             {
               id: '1c',
               name: 'instalations forum',
-              url: 'www.google.pl'
+              url: 'https://google.pl'
             },
             {
               id: '1d',
               name: 'estates forum',
-              url: 'www.google.pl'
+              url: 'https://google.pl'
             },
             {
               id: '1e',
               name: 'news forum',
-              url: 'www.google.pl'
+              url: 'https://google.pl'
             }
           ]
         },
@@ -68,27 +68,27 @@ class App extends Component {
             {
               id: '2a',
               name: 'office apps',
-              url: 'www.yahoo.com'
+              url: 'https://google.pl'
             },
             {
               id: '2b',
               name: 'one drive',
-              url: 'www.onedrive.com'
+              url: 'https://google.pl'
             },
             {
               id: '2c',
               name: 'outlock',
-              url: 'www.outlock.com'
+              url: 'https://google.pl'
             },
             {
               id: '2d',
               name: 'sharepoint',
-              url: 'www.sharepoint.com'
+              url: 'https://google.pl'
             },
             {
               id: '2e',
               name: 'yammer',
-              url: 'www.yammer.com'
+              url: 'https://google.pl'
             }
           ]
         },
@@ -100,37 +100,37 @@ class App extends Component {
             {
               id: '3a',
               name: 'offices',
-              url: 'www.offices.com'
+              url: 'https://google.pl'
             },
             {
               id: '3b',
               name: 'market',
-              url: 'www.market.com'
+              url: 'https://google.pl'
             },
             {
               id: '3c',
               name: 'hotels',
-              url: 'www.booking.com'
+              url: 'https://google.pl'
             },
             {
               id: '3d',
               name: 'culture',
-              url: 'www.google.com'
+              url: 'https://google.pl'
             },
             {
               id: '3e',
               name: 'apartments',
-              url: 'www.bing.com'
+              url: 'https://google.pl'
             },
             {
               id: '3f',
               name: 'industry',
-              url: 'www.industry.com'
+              url: 'https://google.pl'
             },
             {
               id: '3g',
               name: 'sport',
-              url: 'www.sport.pl'
+              url: 'https://google.pl'
             }
           ]
         },
@@ -142,7 +142,7 @@ class App extends Component {
             {
               id: '4a',
               name: 'lorem ipsum',
-              url: 'www.lorem.pl'
+              url: 'https://google.pl'
             }
           ]
         },
@@ -154,7 +154,7 @@ class App extends Component {
             {
               id: '5a',
               name: 'announcements',
-              url: 'www.announcements.com'
+              url: 'https://google.pl'
             }
           ]
         }
