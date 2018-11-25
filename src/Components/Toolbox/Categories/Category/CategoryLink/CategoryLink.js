@@ -1,7 +1,6 @@
 import React from 'react';
 
 import classes from './CategoryLink.module.scss';
-console.log(classes);
 
 const categoryLink = (props) => {
   return (

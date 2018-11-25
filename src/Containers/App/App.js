@@ -8,14 +8,15 @@ import Terms from '../../Components/Terms/Terms';
 import classes from '../../Shared/styles.modules.scss';
 import Placeholder from '../../Components/Placeholer/Placeholder';
 import Toolbox from '../../Components/Toolbox/Toolbox';
+import NotFound from '../../Components/NotFound/NotFound';
 
 // icons
 // I import hehe icons to put them into state, because I want to have proper paths to them in different builds
-import tagIcon from '../../Assets/images/tag.svg';
-import schoolIcon from '../../Assets/images/school.svg';
-import suitcaseIcon from '../../Assets/images/suitcase.svg';
-import documentIcon from '../../Assets/images/document.svg';
-import bubbleIcon from '../../Assets/images/bubble.svg';
+import tagIcon from '../../Assets/images/toolboxIcons/tag.svg';
+import schoolIcon from '../../Assets/images/toolboxIcons/school.svg';
+import suitcaseIcon from '../../Assets/images/toolboxIcons/suitcase.svg';
+import documentIcon from '../../Assets/images/toolboxIcons/document.svg';
+import bubbleIcon from '../../Assets/images/toolboxIcons/bubble.svg';
 
 class App extends Component {
   constructor(props) {
@@ -200,6 +201,7 @@ class App extends Component {
           <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
           <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
           <Route path="/terms" component={Terms} />
+          <Route path="*" component={NotFound} />
 
           <Footer data={this.state.companyData} />
         </div>

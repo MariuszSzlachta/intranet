@@ -11,7 +11,7 @@ const toggler = (props) => {
   }
 
   return (
-    <button className={componentClasses.join(' ')} onClick={props.toggle}>
+    <button className={componentClasses.join(' ')} onClick={props.toggle} aria-label="menu toggler">
       <div className={classes.firefoxFallback}>
         <span className={classes.toggler__bar}></span>
         <span className={classes.toggler__bar}></span>

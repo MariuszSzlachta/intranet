@@ -39,3 +39,10 @@
     min-height: 100vh;
   }
 }
+@media (max-width: 992px) {
+  .placeholder {
+    &__title {
+      text-align: center;
+    }
+  }
+}
