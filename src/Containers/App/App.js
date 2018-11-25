@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { AnimatedSwitch } from 'react-router-transition';
 
+// components
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Terms from '../../Components/Terms/Terms';
-
-import classes from '../../Shared/styles.modules.scss';
 import Placeholder from '../../Components/Placeholer/Placeholder';
 import Toolbox from '../../Components/Toolbox/Toolbox';
 import NotFound from '../../Components/NotFound/NotFound';
+
+// styles
+import classes from '../../Shared/styles.modules.scss';
 
 // icons
 // I import hehe icons to put them into state, because I want to have proper paths to them in different builds
@@ -190,22 +193,29 @@ class App extends Component {
       <Router>
         <div className={classes.containerFluid}>
           <Header submited={this.onSubmitHandler} />
-
-          <Route path="/" exact render={props => <Placeholder {...props} title="Home" />} />
-          <Route path="/news" render={props => <Placeholder {...props} title="News" />} />
-          <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
-          <Route
-            path="/toolbox"
-            render={props => <Toolbox {...props} submited={this.onSubmitHandler} data={this.state.toolboxData} />}
-          />
-          <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
-          <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
-          <Route path="/terms" component={Terms} />
-          <Route path="*" component={NotFound} />
-
+          <AnimatedSwitch
+            atEnter={{ offset: -100 }}
+            atLeave={{ offset: 0 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              transform: `TranslateX(${styles.offset}vw)`,
+            })}
+          >
+            <Route path="/" exact render={props => <Placeholder {...props} title="Home" />} />
+            <Route path="/news" render={props => <Placeholder {...props} title="News" />} />
+            <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
+            <Route
+              path="/toolbox"
+              render={props => <Toolbox {...props} submited={this.onSubmitHandler} data={this.state.toolboxData} />}
+            />
+            <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
+            <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
+            <Route path="/terms" component={Terms} />
+            <Route path="*" component={NotFound} />
+          </ AnimatedSwitch>
           <Footer data={this.state.companyData} />
         </div>
-    </Router>
+      </Router>
     );
   }
 }

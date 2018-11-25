@@ -1,1 +1,9 @@
 @import '../../Shared/variables.module.scss';
+
+.switchWrapper {
+  position: relative;
+}
+
+.switchWrapper > * {
+  position: absolute;
+}
