@@ -23,9 +23,6 @@ const toolbox = (props) => {
           expanded={props.expanded}
         />
       </div>
-      <button 
-        onClick={props.revert}
-      >revert</button>
       <div className={classes.toolbox__wrapper}>
         <Categories data={props.data} />
       </div>

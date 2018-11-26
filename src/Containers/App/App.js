@@ -37,12 +37,6 @@ class App extends Component {
     this.setState({
       toolboxData: initialState
     })
-    // console.log(this.state.initialState);
-  }
-  onRevert = (e) => {
-    this.setState({
-      toolboxData: initialState
-    })
   }
   onTransfromHandler = (event) => {
     event.preventDefault();
@@ -55,32 +49,40 @@ class App extends Component {
   }
 
   onSubmitHandler = (event) => {
-    // on submit handler jest wywoływany na wysłanie formularza
-    // bokuję domyślną akcję
     event.preventDefault();
-    // pobieram vartość pola input z inputa w formularzu
-    let searchingText = event.target.input.value;
-
-    // kopiuję stan do zmiennej state w sposób niemutowalny
+    let searchingText = event.target.input.value.toLowerCase();
     const state = [...this.state.initialState];
 
-    // warunkowe wykonanie kodu poniżej
     if (searchingText.length > 3) {
-      
-      // sprawdzam czy w nazwach kategorii znajduje się ciąg z inputa
-      // jeśli TAK to zwracam całą kategię do zmiennej
-      // jesli nie zwracam NULL
-      let filteredCategories = state.filter(el => el.name.includes(searchingText) ? el : null);
+      let data = [];
+      // this filters via categories names
+      let filteredNames = state.filter(el => el.name.toLowerCase().includes(searchingText) ? el : null);
 
-      // 
-      filteredCategories = state.map(category => {
-        category.links = category.links.filter(link => link.name.includes(searchingText));
-        return category;
+      // this filters links in categories
+      let filteredLinks = state.map(category => {
+        const updatedLinks = category.links.filter(link => link.name.toLowerCase().includes(searchingText));
+        return { ...category, links: updatedLinks };
       })
-      filteredCategories = filteredCategories.filter(category => category.links.length !==0);
-    
+
+      // if doesn't found anything in categories names return results from searching via link name
+      if (filteredNames.length === 0) {
+        data = [...filteredLinks].filter(el => el.links.length !==0 )
+      }
+
+      // filter duplicates
+      if (filteredNames.length !== 0) {
+        let temp = filteredLinks.filter(el => !filteredNames.find(el2 => el.id === el2.id))
+        data = [...filteredNames, ...temp].filter(el => el.links.length !== 0)
+      }
+
       this.setState({
-        toolboxData: filteredCategories
+        toolboxData: data
+      })
+
+    } else if (searchingText.length === 0) {
+      // I implemented this because I want to restore state when search bar is empty
+      this.setState({
+        toolboxData: initialState
       })
     }
   }
@@ -104,7 +106,7 @@ class App extends Component {
             <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
             <Route
               path="/toolbox"
-              render={props => <Toolbox {...props} expanded={true} revert={this.onRevert} submited={this.onSubmitHandler} data={this.state.toolboxData} />}
+              render={props => <Toolbox {...props} expanded={true} submited={this.onSubmitHandler} data={this.state.toolboxData} />}
             />
             <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
             <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
