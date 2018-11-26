@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Home",
+    "target": "/"
+  },
+  {
+    "name": "News",
+    "target": "/news"
+  },
+  {
+    "name": "Departments",
+    "target": "/departments"
+  },
+  {
+    "name": "Toolbox",
+    "target": "/toolbox"
+  },
+  {
+    "name": "Announcements",
+    "target": "/announcements"
+  },
+  {
+    "name": "Sections",
+    "target": "/sections"
+  }
+]

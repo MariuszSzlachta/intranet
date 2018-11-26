@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Toggler from '../../Components/Toggler/Toggler';
 import Navbar from '../../Components/Navbar/Navbar';
+// data
+import links from '../../data/Navigation/navigation.json';
 
 import classes from './Navigation.module.scss';
 
@@ -11,32 +13,7 @@ class Navigation extends Component {
     super(props);
     this.state = {
       togglerOn: false,
-      links: [
-        {
-          name: 'Home',
-          target: '/'
-        },
-        {
-          name: 'News',
-          target: '/news'
-        },
-        {
-          name: 'Departments',
-          target: '/departments'
-        },
-        {
-          name: 'Toolbox',
-          target: '/toolbox'
-        },
-        {
-          name: 'Announcements',
-          target: '/announcements'
-        },
-        {
-          name: 'Sections',
-          target: '/sections'
-        }
-      ]
+      links
     }
   }
 
