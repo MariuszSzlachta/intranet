@@ -5,6 +5,7 @@ import CategoryLink from './CategoryLink/CategoryLink';
 import classes from './Category.module.scss';
 
 const category = (props) => {
+  
   const linksElements = props.links.map(el => (
     <CategoryLink
       key={el.id}
@@ -15,6 +16,7 @@ const category = (props) => {
   ))
 
   return (
+    props.links.length === 0 ? null :
     <li key={props.id} className={classes.category}>
       <header className={classes.category__header}>
         <img className={classes.category__icon} src={props.iconUrl} alt="category icon" />
