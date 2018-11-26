@@ -1,0 +1,132 @@
+[
+  {
+    "id": "1",
+    "name": "forums",
+    "iconUrl": "https://svgshare.com/i/9YA.svg",
+    "links": [
+      {
+        "id": "1a",
+        "name": "development forum",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "1b",
+        "name": "instalations forum",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "1c",
+        "name": "instalations forum",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "1d",
+        "name": "estates forum",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "1e",
+        "name": "news forum",
+        "url": "https://google.pl"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "resources O365",
+    "iconUrl": "https://svgshare.com/i/9ZM.svg",
+    "links": [
+      {
+        "id": "2a",
+        "name": "office apps",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "2b",
+        "name": "one drive",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "2c",
+        "name": "outlock",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "2d",
+        "name": "sharepoint",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "2e",
+        "name": "yammer",
+        "url": "https://google.pl"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "projects",
+    "iconUrl": "https://svgshare.com/i/9Zg.svg",
+    "links": [
+      {
+        "id": "3a",
+        "name": "offices",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "3b",
+        "name": "market",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "3c",
+        "name": "hotels",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "3d",
+        "name": "culture",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "3e",
+        "name": "apartments",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "3f",
+        "name": "industry",
+        "url": "https://google.pl"
+      },
+      {
+        "id": "3g",
+        "name": "sport",
+        "url": "https://google.pl"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "society",
+    "iconUrl": "https://svgshare.com/i/9ZC.svg",
+    "links": [
+      {
+        "id": "4a",
+        "name": "lorem ipsum",
+        "url": "https://google.pl"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "important",
+    "iconUrl": "https://svgshare.com/i/9_3.svg",
+    "links": [
+      {
+        "id": "5a",
+        "name": "announcements",
+        "url": "https://google.pl"
+      }
+    ]
+  }
+]

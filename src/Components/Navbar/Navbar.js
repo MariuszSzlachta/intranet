@@ -1,14 +1,16 @@
 import React from 'react';
-import NavbarItem from './NavbarItem/NavbarItem';
+
+import { NavLink } from 'react-router-dom';
 
 import classes from './Navbar.module.scss';
 
 const navbar = (props) => {
-  const navbarItems = props.links.map(item => {
-    return (
-      <NavbarItem key={item.name} url={item.target} name={item.name} />
+  const navbarItems = props.links.map(item => (
+      <li className={classes.navbarItem} key={item.name}>
+        <NavLink exact to={item.target} activeClassName={classes.active} className={classes.navbarItem__link}>{item.name}</NavLink>
+      </li>
     )
-  });
+  );
 
   let componentClasses = [classes.navbar];
   if (!props.toggled) {

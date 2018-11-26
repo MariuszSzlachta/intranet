@@ -13,13 +13,9 @@ import NotFound from '../../Components/NotFound/NotFound';
 // styles
 import classes from '../../Shared/styles.modules.scss';
 
-// icons
-// I import hehe icons to put them into state, because I want to have proper paths to them in different builds
-import tagIcon from '../../Assets/images/toolboxIcons/tag.svg';
-import schoolIcon from '../../Assets/images/toolboxIcons/school.svg';
-import suitcaseIcon from '../../Assets/images/toolboxIcons/suitcase.svg';
-import documentIcon from '../../Assets/images/toolboxIcons/document.svg';
-import bubbleIcon from '../../Assets/images/toolboxIcons/bubble.svg';
+// data
+import toolboxData from '../../data/ToolboxData/toolboxData.json';
+
 
 class App extends Component {
   constructor(props) {
@@ -31,138 +27,7 @@ class App extends Component {
         regon: '00000000',
         nip: '00000000'
       },
-      toolboxData: [
-        {
-          id: '1',
-          name: 'forums',
-          iconUrl: bubbleIcon,
-          links: [
-            {
-              id: '1a',
-              name: 'development forum',
-              url: 'https://google.pl'
-            },
-            {
-              id: '1b',
-              name: 'instalations forum',
-              url: 'https://google.pl'
-            },
-            {
-              id: '1c',
-              name: 'instalations forum',
-              url: 'https://google.pl'
-            },
-            {
-              id: '1d',
-              name: 'estates forum',
-              url: 'https://google.pl'
-            },
-            {
-              id: '1e',
-              name: 'news forum',
-              url: 'https://google.pl'
-            }
-          ]
-        },
-        {
-          id: '2',
-          name: 'resources O365',
-          iconUrl: documentIcon,
-          links: [
-            {
-              id: '2a',
-              name: 'office apps',
-              url: 'https://google.pl'
-            },
-            {
-              id: '2b',
-              name: 'one drive',
-              url: 'https://google.pl'
-            },
-            {
-              id: '2c',
-              name: 'outlock',
-              url: 'https://google.pl'
-            },
-            {
-              id: '2d',
-              name: 'sharepoint',
-              url: 'https://google.pl'
-            },
-            {
-              id: '2e',
-              name: 'yammer',
-              url: 'https://google.pl'
-            }
-          ]
-        },
-        {
-          id: '3',
-          name: 'projects',
-          iconUrl: schoolIcon,
-          links: [
-            {
-              id: '3a',
-              name: 'offices',
-              url: 'https://google.pl'
-            },
-            {
-              id: '3b',
-              name: 'market',
-              url: 'https://google.pl'
-            },
-            {
-              id: '3c',
-              name: 'hotels',
-              url: 'https://google.pl'
-            },
-            {
-              id: '3d',
-              name: 'culture',
-              url: 'https://google.pl'
-            },
-            {
-              id: '3e',
-              name: 'apartments',
-              url: 'https://google.pl'
-            },
-            {
-              id: '3f',
-              name: 'industry',
-              url: 'https://google.pl'
-            },
-            {
-              id: '3g',
-              name: 'sport',
-              url: 'https://google.pl'
-            }
-          ]
-        },
-        {
-          id: '4',
-          name: 'society',
-          iconUrl: suitcaseIcon,
-          links: [
-            {
-              id: '4a',
-              name: 'lorem ipsum',
-              url: 'https://google.pl'
-            }
-          ]
-        },
-        {
-          id: '5',
-          name: 'important',
-          iconUrl: tagIcon,
-          links: [
-            {
-              id: '5a',
-              name: 'announcements',
-              url: 'https://google.pl'
-            }
-          ]
-        }
-      ]
+      toolboxData,
     }
   }
 
