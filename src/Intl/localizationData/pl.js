@@ -9,6 +9,11 @@ export default
   announcements: 'Ogłoszenia',
   sections: 'Sekcje',
   about: 'O nas',
-  notFound: 'Ale ta strona nie istnieje. Sprawdź ponownie adres :)'
+  notFound: 'Ale ta strona nie istnieje. Sprawdź ponownie adres :)',
+  termsTitle: 'Definicje i zasady użytkowania',
+  search: 'szukaj',
+  filter: 'filtruj',
+  terms1: 'Używając tej aplikacji zobowiązujesz się',
+  terms2: 'przesetrzegać zasad i regulacji',
 
 };

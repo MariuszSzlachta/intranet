@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import SearchBar from '../SearchBar/SearchBar';
 import Categories from './Categories/Categories';
@@ -14,7 +15,9 @@ const toolbox = (props) => {
   
   return (
     <div className={classes.toolbox}>
-      <h1 className={classes.toolbox__title}>Toolbox</h1>
+      <h1 className={classes.toolbox__title}>
+        <FormattedMessage id={props.title.toLowerCase()} />
+      </h1>
       <div className={classes.toolbox__componentWrapper}>
         <SearchBar
           style={customStyles}

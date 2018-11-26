@@ -7,7 +7,9 @@ import classes from './Placeholder.module.scss';
 const placeholder = (props) => (
   <section className={classes.placeholder}>
     <div className="container">
-      <h1 className={classes.placeholder__title}></h1>
+      <h1 className={classes.placeholder__title}>
+        <FormattedMessage id={props.title.toLowerCase()} />
+      </h1>
       <p className={classes.placeholder__text}>
         <FormattedMessage id="placeholder" />
       </p>

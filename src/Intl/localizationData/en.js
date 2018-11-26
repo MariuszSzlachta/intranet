@@ -8,5 +8,10 @@ export default  {
     announcements: 'Announcements',
     sections: 'Sections',
     about: 'About',
-    notFound: 'But this page doesn\'t exist. Chech address again :)'
+    notFound: 'But this page doesn\'t exist. Chech address again :)',
+    termsTitle: 'Terms and Conditions',
+    search: 'search',
+    filter: 'filter',
+    terms1: 'Using this application you accept',
+    terms2: 'terms and conditions of use',
 };

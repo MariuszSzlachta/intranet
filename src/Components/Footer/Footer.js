@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 import classes from './Footer.module.scss';
+import { FormattedMessage } from 'react-intl';
 const date = new Date().getFullYear();
 
 const footer = (props) => (
@@ -17,15 +18,17 @@ const footer = (props) => (
     </address>
     <div className={classes.footer__copy}>
       <p className={classes.footer__text}>
-        <span>Using this application you accept</span>
+        <FormattedMessage id="terms1" />
         <br />
         <Link to="/terms" className={classes.footer__link}>
-          <strong>terms and conditions of use</strong>
+          <strong>
+            <FormattedMessage id="terms2" />
+          </strong>
         </Link>
       </p>
       <p className={classes.footer__text}>Copyright &copy; {date.toString()} Company</p>
-      <LanguageSwitcher switch={props.switch} />
     </div>
+    <LanguageSwitcher switch={props.switch} />
   </footer>
 );
 

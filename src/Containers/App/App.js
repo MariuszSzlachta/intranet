@@ -134,7 +134,15 @@ class App extends Component {
               <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
               <Route
                 path="/toolbox"
-                render={props => <Toolbox {...props} expanded={true} submited={this.onSubmitHandler} data={this.state.toolboxData} />}
+                render={props =>
+                  <Toolbox 
+                    {...props}
+                    expanded={true}
+                    submited={this.onSubmitHandler}
+                    data={this.state.toolboxData}
+                    title="Toolbox"
+                   />
+                }
               />
               <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
               <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
