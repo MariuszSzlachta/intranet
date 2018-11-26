@@ -32,9 +32,11 @@ const messages = {
 };
 
 addLocaleData([...locale_en, ...locale_pl]);
-const language = navigator.language.split(/[-_]/)[0];  // language without region code
 
-console.log(language);
+// you can use language of your browser instad of using LanguageSwitcher just uncomment const language...
+// and switch inside IntlProvider messages={messages[this.state.locale] inside for messages={messages[language]}
+// language without region code
+// const language = navigator.language.split(/[-_]/)[0];
 
 class App extends Component {
   constructor(props) {
