@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+
 import classes from './Footer.module.scss';
+const date = new Date().getFullYear();
 
 const footer = (props) => (
   <footer className={classes.footer}>
@@ -20,7 +23,8 @@ const footer = (props) => (
           <strong>terms and conditions of use</strong>
         </Link>
       </p>
-      <p className={classes.footer__text}>Copyright &copy; 2018 Company</p>
+      <p className={classes.footer__text}>Copyright &copy; {date.toString()} Company</p>
+      <LanguageSwitcher switch={props.switch} />
     </div>
   </footer>
 );
