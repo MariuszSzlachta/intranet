@@ -11,7 +11,9 @@ const header = (props) => (
     <Logo />
     <Navigation />
     <SearchBar
-      submited={(event) => props.submited(event)}
+      expanded={props.expanded}
+      submited={(event) => {props.submited(event)}}
+      placeholder="search"
     />
   </header>
 );

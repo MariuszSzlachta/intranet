@@ -12,20 +12,23 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      togglerOn: false,
+      togglerOn: true,
       links
     }
   }
+  closeNavbarHandler = ()=> {
+    this.setState({ togglerOn: true });
+  }
 
-  toggleNavbarhandler = () => {
+  toggleNavbarHandler = () => {
     this.setState({ togglerOn: !this.state.togglerOn})
   }
 
   render() {
     return (
       <nav className={classes.nav}>
-        <Navbar toggled={this.state.togglerOn} links={this.state.links} />
-        <Toggler toggle={this.toggleNavbarhandler} toggled={this.state.togglerOn} />
+        <Navbar close={this.closeNavbarHandler} toggled={this.state.togglerOn} links={this.state.links} />
+        <Toggler toggle={this.toggleNavbarHandler} toggled={this.state.togglerOn} />
       </nav>
     );
   }

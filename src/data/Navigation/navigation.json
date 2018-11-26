@@ -22,5 +22,9 @@
   {
     "name": "Sections",
     "target": "/sections"
+  },
+  {
+    "name": "About",
+    "target": "/about"
   }
 ]

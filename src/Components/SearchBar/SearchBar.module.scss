@@ -2,30 +2,44 @@
 
 .searchBar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-radius: 1.5rem;
+  height: 100%;
+  width: 100%;
   padding: 5px 10px;
-  min-width: 110px;
   background-color: $bg_light;
-  height: 30px;
+  transition: width 0.3s ease-in-out;
+  &__outer {
+    height: 30px;
+    min-width: 110px;
+    // width: 30%;
+  }
   &__input {
     display: block;
     width: 80%;
     margin-right: 5px;
     border: none;
+    padding: 0;
     order: 1;
     background: transparent;
     color: $white;
     font-size: 1.2rem;
+    transition: width 0.3s ease-in-out;
   }
   &__button {
     order: 2;
     width: 20%;
-    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
+    padding: 0;
+    background: none;
+    font-size: 1.4rem;
+    color: $text_primary;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    color: $text_primary;
     &:hover > * {
       transform: scale(1.2);
     }
@@ -34,6 +48,23 @@
 
 @media (max-width: 992px) {
   .searchBar {
-    width: 30%;
+    transition: 0.3s ease-in-out;
+
+    &__outer {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &.narrowed {
+      width: 40px;
+      padding: 0;
+      justify-content: center;
+    }
+    &.narrowed .searchBar__input {
+      display: none;
+    }
+    &.narrowed .searchBar__button {
+      width: 100%;
+    }
   }
 }
