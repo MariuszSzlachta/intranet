@@ -110,6 +110,7 @@ If you want to deploy this app first you need to build production version of it.
   -  npm install -g serve
   -  from main catalog of this project do command:
   -  serve -s build
+  -  open browser in http://localhost:5000 as you see in terminal
 6. As I mentioned before, it's more than one way to deploy app. See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
