@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import '../../Shared/styles.modules.scss';
 import classes from './Placeholder.module.scss';
@@ -17,5 +18,9 @@ const placeholder = (props) => (
     </div>
   </section>
 );
+
+placeholder.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 export default placeholder;

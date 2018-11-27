@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Toggler from '../../Components/Toggler/Toggler';
 import Navbar from '../../Components/Navbar/Navbar';
-// data
+
 import links from '../../data/Navigation/navigation.json';
 
 import classes from './Navigation.module.scss';
@@ -14,15 +14,16 @@ class Navigation extends Component {
     this.state = {
       togglerOn: true,
       links
-    }
-  }
+    };
+  };
+
   closeNavbarHandler = ()=> {
     this.setState({ togglerOn: true });
-  }
+  };
 
   toggleNavbarHandler = () => {
-    this.setState({ togglerOn: !this.state.togglerOn})
-  }
+    this.setState( prevState => ({ togglerOn: !prevState.togglerOn}));
+  };
 
   render() {
     return (
@@ -31,7 +32,7 @@ class Navigation extends Component {
         <Toggler toggle={this.toggleNavbarHandler} toggled={this.state.togglerOn} />
       </nav>
     );
-  }
-}
+  };
+};
 
 export default Navigation;

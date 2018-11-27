@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './SearchBar.module.scss';
 
@@ -10,7 +11,7 @@ const searchBar = (props) => {
     componentClasses.push(classes.narrowed);
   } else {
     componentClasses = componentClasses.filter(el => el === 'narrowed' ? null : el);
-  }
+  };
 
   return (
     <div className={classes.searchBar__outer} >
@@ -36,6 +37,13 @@ const searchBar = (props) => {
       </form>
     </div>
   );
+};
+
+searchBar.propTypes = {
+  submited: PropTypes.func,
+  click: PropTypes.func,
+  placeholder: PropTypes.string,
+  style: PropTypes.object
 };
 
 export default searchBar;

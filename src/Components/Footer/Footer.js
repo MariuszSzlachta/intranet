@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
@@ -31,5 +32,15 @@ const footer = (props) => (
     <LanguageSwitcher switch={props.switch} />
   </footer>
 );
+
+
+footer.propTypes = {
+  data: PropTypes.shape({
+    address: PropTypes.string,
+    krs: PropTypes.string,
+    regon: PropTypes.string,
+    nip: PropTypes.string,
+  }),
+};
 
 export default footer;

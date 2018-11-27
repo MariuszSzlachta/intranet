@@ -12,6 +12,7 @@
   cursor: pointer;
   color: $white;
 }
+
 .switch__label:before, .switch__label:after {
   content: "";
   position: absolute;
@@ -21,6 +22,7 @@
   transform: translate(0, -50%);
   transition: all 0.3s ease;
 }
+
 .switch__label:before {
   left: 1px;
   width: 34px;
@@ -28,6 +30,7 @@
   background-color: #9E9E9E;
   border-radius: 8px;
 }
+
 .switch__label:after {
   left: 0;
   width: 20px;
@@ -36,22 +39,28 @@
   border-radius: 50%;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
 }
+
 .switch__label .toggle__on {
   display: none;
 }
+
 .switch__label .toggle__off {
   display: inline-block;
 }
+
 .switch__input:checked + .switch__label:before {
   background-color: $bg_light;
 }
+
 .switch__input:checked + .switch__label:after {
   background-color: $white;
   transform: translate(80%, -50%);
 }
+
 .switch__input:checked + .switch__label .toggle__on {
   display: inline-block;
 }
+
 .switch__input:checked + .switch__label .toggle__off {
   display: none;
 }

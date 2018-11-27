@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CategoryLink from './CategoryLink/CategoryLink';
 
 import classes from './Category.module.scss';
 
 const category = (props) => {
-  
+
   const linksElements = props.links.map(el => (
     <CategoryLink
       key={el.id}
@@ -13,7 +14,7 @@ const category = (props) => {
       name={el.name}
       url={el.url}
     />
-  ))
+  ));
 
   return (
     props.links.length === 0 ? null :
@@ -27,6 +28,12 @@ const category = (props) => {
       </ul>
     </li>
   );
+};
+
+category.propTypes = {
+  links: PropTypes.array,
+  iconUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };
 
 export default category;

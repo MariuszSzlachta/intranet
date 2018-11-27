@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './CategoryLink.module.scss';
 
@@ -15,6 +16,12 @@ const categoryLink = (props) => {
       </a>
     </li>
   );
+};
+
+categoryLink.propTypes = {
+  id: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };
 
 export default categoryLink;

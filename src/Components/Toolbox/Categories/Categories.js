@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Category from './Category/Category';
 
@@ -13,13 +14,17 @@ const categories = ({ data }) => {
       iconUrl={el.iconUrl}
       links={el.links}
     />
-  ))
+  ));
 
   return (
     <ul className={classes.categories}>
       {categoryElements}
     </ul>
   );
+};
+
+categories.propTypes = {
+  data: PropTypes.array
 };
 
 export default categories;

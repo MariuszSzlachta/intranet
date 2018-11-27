@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './LanguageSwitcher.module.scss';
 
@@ -11,5 +12,9 @@ const languageSwitcher = (props) => (
     </label>
   </>
 );
+
+languageSwitcher.propTypes = {
+  switch: PropTypes.func
+}
 
 export default languageSwitcher;

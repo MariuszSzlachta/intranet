@@ -6,7 +6,9 @@ import classes from './Terms.module.scss';
 const terms = (props) => (
   <article className={classes.terms}>
     <div className={classes.terms__body} >
-      <h1 className={classes.terms__heading_1}><FormattedMessage id="termsTitle" /></h1>
+      <h1 className={classes.terms__heading_1}>
+        <FormattedMessage id="termsTitle" />
+      </h1>
       <section className={classes.terms__section} >
         <h2 className={classes.terms__heading_2}>&sect; Lorem</h2>
         <p className={classes.terms__text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium dicta eligendi quasi adipisci ratione, modi quas dolorem? Consequatur, aspernatur culpa.</p>
