@@ -1,7 +1,6 @@
 
 # Intranet
 
-This is an application made as recruitment task for Front-End (React) Developer in Predica Sp. z o.o.
 Author: Mariusz Szlachta
 
 ## Development
