@@ -122,11 +122,11 @@ class App extends Component {
                 transform: `TranslateX(${styles.offset}vw)`,
               })}
             >
-              <Route path="/" exact render={props => <Placeholder {...props} title="Home" />} />
-              <Route path="/news" render={props => <Placeholder {...props} title="News" />} />
-              <Route path="/departments" render={props => <Placeholder {...props} title="Departments" />} />
+              <Route path={process.env.PUBLIC_URL + '/'} exact render={props => <Placeholder {...props} title="Home" />} />
+              <Route path={process.env.PUBLIC_URL + '/news'} render={props => <Placeholder {...props} title="News" />} />
+              <Route path={process.env.PUBLIC_URL + '/departments'} render={props => <Placeholder {...props} title="Departments" />} />
               <Route
-                path="/toolbox"
+                path={process.env.PUBLIC_URL + '/toolbox'}
                 render={props =>
                   <Toolbox
                     {...props}
@@ -137,10 +137,10 @@ class App extends Component {
                    />
                 }
               />
-              <Route path="/announcements" render={props => <Placeholder {...props} title="Announcements" />} />
-              <Route path="/sections" render={props => <Placeholder {...props} title="Sections" />} />
-              <Route path="/about" render={props => <Placeholder {...props} title="About" />} />
-              <Route path="/terms" component={Terms} />
+              <Route path={process.env.PUBLIC_URL + '/announcements'} render={props => <Placeholder {...props} title="Announcements" />} />
+              <Route path={process.env.PUBLIC_URL + '/sections'} render={props => <Placeholder {...props} title="Sections" />} />
+              <Route path={process.env.PUBLIC_URL + '/about'} render={props => <Placeholder {...props} title="About" />} />
+              <Route path={process.env.PUBLIC_URL + '/terms'} component={Terms} />
               <Route path="*" render={props => <NotFound {...props} title="error" />} />
             </ AnimatedSwitch>
             <Footer data={this.state.companyData} switch={this.switchLocaleHandler} />
