@@ -21,7 +21,7 @@ const footer = (props) => (
       <p className={classes.footer__text}>
         <FormattedMessage id="terms1" />
         <br />
-        <Link to="/terms" className={classes.footer__link}>
+        <Link to={process.env.PUBLIC_URL + '/terms'} className={classes.footer__link}>
           <strong>
             <FormattedMessage id="terms2" />
           </strong>

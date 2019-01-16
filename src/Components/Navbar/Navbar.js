@@ -9,7 +9,7 @@ import classes from './Navbar.module.scss';
 const navbar = (props) => {
   const navbarItems = props.links.map(item => (
       <li className={classes.navbarItem} key={item.name} onClick={props.close}>
-        <NavLink exact to={item.target} activeClassName={classes.active} className={classes.navbarItem__link}>
+        <NavLink exact to={process.env.PUBLIC_URL + item.target} activeClassName={classes.active} className={classes.navbarItem__link}>
           <FormattedMessage id={item.name.toLowerCase()} >
           </FormattedMessage>
         </NavLink>
