@@ -1,7 +1,7 @@
 {
   "name": "intranet",
   "version": "0.1.0",
-  "homepage": "http://mariuszszlachta.github.io/intranet/",
+  "homepage": "https://mariuszszlachta.github.io/intranet/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.0",
