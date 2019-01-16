@@ -1,7 +1,9 @@
 
 # Intranet
 
-Author: Mariusz Szlachta
+Intranet is a Single Page Aplication. It contains a boilerplates of subpages for a future development.
+One of subpages is already implemented and this subpage is toolbox. Toolbox presents categorized lists of internet links and allows you to filter that lists via category name and link name. The App is also nationalize friendly. I have used React Intl to implement this functionality and language can be switched by skingle click in button inside the footer.
+
 
 ## Development
 
